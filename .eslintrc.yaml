@@ -1,0 +1,25 @@
+extends:
+  - '@antfu'
+plugins:
+  - simple-import-sort
+rules:
+  # 换行符 LF
+  linebreak-style: [error, unix]
+  # vue 类型文件的标签顺序
+  vue/component-tags-order: [error, {order: [template, script, style]}]
+  # 代码块必须换行
+  '@typescript-eslint/brace-style': [error, 1tbs]
+  # 代码块必须有大括号
+  curly: [error, all]
+  # 行尾必须要有分号
+  '@typescript-eslint/semi': [error, always]
+  # 字符串用双引号
+  '@typescript-eslint/quotes': [error, double]
+  # 导入排序
+  simple-import-sort/imports: error
+  # 关闭默认的导入排序
+  sort-imports: off
+  import/order: off
+  # 常量被修改 ($ref这种会被误报)
+  no-const-assign: off
+

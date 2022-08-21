@@ -1,0 +1,16 @@
+appName: toolbox
+back: Back
+dynamic-route: Dynamic route!
+error:
+  PageNotFound: page lost
+go: Go
+menu:
+  a: menu a
+  ab: menu ab
+  abc: menu abc
+  goMain: Back to Home
+  hi: hi
+  main: front page
+shu-ru-ni-de-ming-zi: enter your name
+vitesse: Vitesse
+zi-yong-de-vite-ru-men-mo-ban: Your own Vite starter template

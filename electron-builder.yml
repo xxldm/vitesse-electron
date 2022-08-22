@@ -1,5 +1,5 @@
 # @see https://www.electron.build/configuration/configuration
-appId: xxldm.${name}
+appId: xxldm.vitesse.electron
 asar: true
 directories:
   output: release

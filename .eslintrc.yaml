@@ -3,8 +3,6 @@ extends:
 plugins:
   - simple-import-sort
 rules:
-  # 换行符 LF
-  linebreak-style: [error, unix]
   # vue 类型文件的标签顺序
   vue/component-tags-order: [error, {order: [template, script, style]}]
   # 代码块必须换行

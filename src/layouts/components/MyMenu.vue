@@ -11,9 +11,6 @@
 </template>
 
 <script lang="ts" setup>
-const router = useRouter();
-const route = useRoute();
-
-const defaultActive = computed(() => route.path);
+const defaultActive = computed(() => useRoute().path);
 const { t } = useI18n();
 </script>

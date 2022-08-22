@@ -1,6 +1,5 @@
 import VueI18n from "@intlify/vite-plugin-vue-i18n";
 import Vue from "@vitejs/plugin-vue";
-import { rmSync } from "fs";
 import { resolve } from "path";
 import Unocss from "unocss/vite";
 import AutoImport from "unplugin-auto-import/vite";
@@ -13,7 +12,7 @@ import { VitePWA } from "vite-plugin-pwa";
 import Layouts from "vite-plugin-vue-layouts";
 
 export default ({ mode }: ConfigEnv): UserConfigExport => {
-  const env = loadEnv(mode, __dirname, ["XXLDM_", "VSCODE_"]);
+  const env = loadEnv(mode, __dirname, ["VSCODE_"]);
   const isDebug = env.VSCODE_DEBUG !== undefined;
   return {
     css: {
@@ -139,9 +138,6 @@ export default ({ mode }: ConfigEnv): UserConfigExport => {
     test: {
       environment: "jsdom",
     },
-
-    // 默认值'/' ,嵌入 electron 需要使用相对路径,不然会找不到资源文件
-    envPrefix: ["XXLDM_"],
     build: {
       emptyOutDir: true,
       // 被 electron 插件覆盖了?,不设置会打包到dist根目录

@@ -1,0 +1,21 @@
+# @see https://www.electron.build/configuration/configuration
+appId: xxldm.${name}
+asar: true
+directories:
+  output: release
+files:
+  - dist
+publish:
+  provider: github
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: public/favicon-512x512.png
+  artifactName: '${productName}_v${version}.${ext}'
+nsis:
+  oneClick: false
+  perMachine: true
+  allowToChangeInstallationDirectory: true
+  deleteAppDataOnUninstall: false

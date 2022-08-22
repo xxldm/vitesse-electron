@@ -11,7 +11,7 @@
   },
   "scripts": {
     "dev": "vite --port 8080",
-    "build": "vite build --base ./ && electron-builder",
+    "build": "vite build --base ./ && electron-builder --publish onTag",
     "build:dir": "vite build --base ./ && electron-builder --dir",
     "build:vite": "vite build",
     "build:electron": "electron-builder",

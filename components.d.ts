@@ -8,7 +8,6 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Counter: typeof import('./src/components/Counter.vue')['default']
-    ElAvatar: typeof import('element-plus/es')['ElAvatar']
     ElBacktop: typeof import('element-plus/es')['ElBacktop']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCalendar: typeof import('element-plus/es')['ElCalendar']
@@ -25,17 +24,11 @@ declare module '@vue/runtime-core' {
     ElPopover: typeof import('element-plus/es')['ElPopover']
     ElResult: typeof import('element-plus/es')['ElResult']
     ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
-    ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
-    Footer: typeof import('./src/components/Footer.vue')['default']
     MyFooter: typeof import('./src/layouts/components/MyFooter.vue')['default']
     MyHeader: typeof import('./src/layouts/components/MyHeader.vue')['default']
     MyMain: typeof import('./src/layouts/components/MyMain.vue')['default']
     MyMenu: typeof import('./src/layouts/components/MyMenu.vue')['default']
-    MyMenuItem: typeof import('./src/layouts/components/MyMenuItem.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-  }
-  export interface ComponentCustomProperties {
-    vLoading: typeof import('element-plus/es')['ElLoadingDirective']
   }
 }

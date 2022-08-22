@@ -1,11 +1,23 @@
 {
+  "name": "vitesse-electron",
+  "version": "0.0.0",
   "private": true,
+  "description": "自用electron模板",
+  "author": { "name": "xxldm", "url": "https://github.com/xxldm" },
+  "main": "dist/electron/main/index.js",
+  "engines": {
+    "node": ">=14.17.0"
+  },
   "scripts": {
-    "build": "vite build",
     "dev": "vite --port 8080",
+    "build": "vite build --base ./ && electron-builder",
+    "build:dir": "vite build --base ./ && electron-builder --dir",
+    "build:vite": "vite build",
+    "build:electron": "electron-builder",
+    "preview": "vite preview",
+    "preview:build:base": "vite build --base %npm_config_base% && vite preview --base %npm_config_base%",
     "lint": "eslint .",
     "typecheck": "vue-tsc --noEmit",
-    "preview": "vite preview",
     "test": "vitest",
     "up": "taze major -I"
   },
@@ -30,6 +42,8 @@
     "@vitejs/plugin-vue": "^3.0.3",
     "@vue/test-utils": "^2.0.2",
     "@vue/tsconfig": "^0.1.3",
+    "electron": "^20.0.3",
+    "electron-builder": "^23.3.3",
     "eslint": "^8.22.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "jsdom": "^20.0.0",
@@ -40,6 +54,7 @@
     "unplugin-auto-import": "^0.11.2",
     "unplugin-vue-components": "^0.22.4",
     "vite": "^3.0.9",
+    "vite-plugin-electron": "^0.9.0",
     "vite-plugin-pages": "^0.25.0",
     "vite-plugin-pwa": "^0.12.3",
     "vite-plugin-vue-layouts": "^0.7.0",

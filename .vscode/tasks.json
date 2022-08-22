@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "run dev",
+      "type": "npm",
+      "script": "dev",
+      "problemMatcher": {
+        "base": "$tsc-watch",
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^.*building for development.*$",
+          "endsPattern": "built in [0-9]*ms.*$"
+        }
+      },
+      "detail": "vite --port 8080",
+      "options": {
+        "env": {
+          "VSCODE_DEBUG": "true"
+        }
+      },
+      "isBackground": true
+    }
+  ]
+}

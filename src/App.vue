@@ -14,5 +14,9 @@ useHead({
     }
     return `${t(`menu.${route.name.toString()}`)} - ${t("appName")}`;
   }),
+  htmlAttrs: {
+    // 后续修改lang属性,好像不会触发浏览器的翻译功能
+    lang: computed(() => useLocaleStore().locale),
+  },
 });
 </script>
